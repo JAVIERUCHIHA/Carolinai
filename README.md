@@ -1,4 +1,4 @@
-# 🏛️ Scraper de Jurisprudencia Chilena - Render.com
+# 🏛️ Scraper de Jurisprudencia Chilena - Render.com.
 
 Scraper automatizado para extraer sentencias judiciales desde [juris.pjud.cl](https://juris.pjud.cl) y almacenarlas en Supabase con embeddings vectoriales para búsquedas semánticas.
 
@@ -261,4 +261,4 @@ MIT License - ver [LICENSE](LICENSE) para detalles.
 
 ---
 
-**Desarrollado con ❤️ por RedJudicial** 
+**Desarrollado con ❤️ por RedJudicial** Forzar nuevo deploy
