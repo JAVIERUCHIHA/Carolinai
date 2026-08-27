@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Scraper de jurisprudencia chilena desde juris.pjud.cl para almacenar en Supabase",
   "main": "main.js",
+  "type": "commonjs",
   "scripts": {
     "start": "node main.js",
     "dev": "nodemon main.js",
@@ -19,7 +20,7 @@
     "render"
   ],
   "author": "RedJudicial",
-  "license": "MIT",
+  "license": "MIT", 
   "dependencies": {
     "@supabase/supabase-js": "^2.38.4",
     "axios": "^1.6.2",
