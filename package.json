@@ -5,7 +5,7 @@
   "main": "main.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node main.js",
+    "start": "node --experimental-require-module main.js",
     "dev": "nodemon main.js",
     "test": "jest",
     "test-config": "node test.js",
