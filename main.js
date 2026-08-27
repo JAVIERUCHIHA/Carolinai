@@ -5,16 +5,17 @@
  * Extrae sentencias de juris.pjud.cl y las almacena en Supabase
  * con embeddings vectoriales para búsquedas semánticas
  * 
- * Optimizado para Render.com - Background Worker
+ * Optimizado para Render.com - Web Service (ES Modules)
  */
 
-require('dotenv').config();
-const puppeteer = require('puppeteer');
-const { createClient } = require('@supabase/supabase-js');
-const OpenAI = require('openai');
-const crypto = require('crypto');
-const moment = require('moment');
-const _ = require('lodash');
+import 'dotenv/config';
+import puppeteer from 'puppeteer';
+import { createClient } from '@supabase/supabase-js';
+import OpenAI from 'openai';
+import crypto from 'crypto';
+import moment from 'moment';
+import _ from 'lodash';
+import express from 'express';
 
 // Configuración de logging mejorado
 const log = {
@@ -616,7 +617,6 @@ class JurisprudenciaScraper {
 }
 
 // --- INICIO SERVIDOR EXPRESS PARA RENDER WEB SERVICE ---
-const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -651,9 +651,7 @@ app.get('/run-scraper', async (req, res) => {
     }
 });
 
-// Solo iniciar el servidor si es el archivo principal
-if (require.main === module) {
-    app.listen(PORT, () => {
-        log.info(`🌐 Web Service escuchando en puerto ${PORT}`);
-    });
-} 
+// Iniciar servidor (siempre, porque es el punto de entrada)
+app.listen(PORT, () => {
+    log.info(`🌐 Web Service escuchando en puerto ${PORT}`);
+});
